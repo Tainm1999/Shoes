@@ -13,7 +13,7 @@ import Success from "./page/Success";
 import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom"
 
 const App = () => {
-  const user = true
+  const user = false
   return (
     <Router>
       <Switch>
@@ -33,10 +33,12 @@ const App = () => {
           <Success />
         </Route>
         <Route path="/login">
-          {user ? <Redirect to="/" /> : <Login />}
+        {user ? <Redirect to="/" /> : <Login />}
+          {/* <Login /> */}
           </Route>
         <Route path="/register">
-          {user ? <Redirect to="/" /> : <Register />}
+        {user ? <Redirect to="/" /> : <Register />}
+          {/* <Register /> */}
         </Route>
       </Switch>
     </Router>
