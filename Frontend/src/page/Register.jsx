@@ -8,7 +8,7 @@ background: linear-gradient(
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)
   ),
-  url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+  url("https://res.cloudinary.com/dwpvpeh7c/image/upload/v1670331110/_117751674_satan-shoes1_lnv3sj.jpg")
     center;
 background-size: cover;
 display: flex;
@@ -40,16 +40,12 @@ margin: 20px 10px 0px 0px;
 padding: 10px;
 `;
 
-const Agreement = styled.span`
-font-size: 12px;
-margin: 20px 0px;
-`;
-
 const Button = styled.button`
 width: 40%;
 border: none;
 padding: 15px 20px;
 background-color: teal;
+margin-top:20px;
 color: white;
 cursor: pointer;
 `;
@@ -58,7 +54,7 @@ const Register = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>CREATE AN ACCOUNT</Title>
+        <Title> <b>CREATE AN ACCOUNT</b> </Title>
         <Form>
           <Input placeholder="name" />
           <Input placeholder="last name" />
@@ -66,10 +62,6 @@ const Register = () => {
           <Input placeholder="email" />
           <Input placeholder="password" />
           <Input placeholder="confirm password" />
-          <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
           <Button>CREATE</Button>
         </Form>
       </Wrapper>

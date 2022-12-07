@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Marquee from "react-fast-marquee";
 
 const Container = styled.div`
 height: 30px;
@@ -14,7 +15,7 @@ font-weight: 500;
 const Announcement = () => {
   return (
     <Container>
-        Free Ship
+        <Marquee direction="right" speed='100'>Free Ship</Marquee>
     </Container>
   )
 }

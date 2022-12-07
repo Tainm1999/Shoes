@@ -11,7 +11,7 @@ background: linear-gradient(
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)
   ),
-  url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+  url("https://res.cloudinary.com/dwpvpeh7c/image/upload/v1669805479/Air-Jordan-1-Retro-High-OG-Banned-Bred-4_gwdfu1.jpg")
     center;
 background-size: cover;
 display: flex;
@@ -91,7 +91,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             LOGIN
           </Button>
-          {error && <Error>Something went wrong...</Error>}
+          {error && <Error>Something wrong...</Error>}
           <Link>FORGOT THE PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
         </Form>
