@@ -54,19 +54,6 @@ const Title = styled.h3`
 margin-bottom: 30px;
 `;
 
-// const List = styled.ul`
-// margin: 0;
-// padding: 0;
-// list-style: none;
-// display: flex;
-// flex-wrap: wrap;
-// `;
-
-// const ListItem = styled.li`
-// width: 50%;
-// margin-bottom: 10px;
-// `;
-
 const Right = styled.div`
 flex: 1;
 padding: 20px;
@@ -109,19 +96,6 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        {/* <Title>Useful Links</Title>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Shoe Fashion</ListItem>
-          <ListItem>Woman Shoe Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
-        </List> */}
       </Center>
       <Right>
         <Title>Contact</Title>
