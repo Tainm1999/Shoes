@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Product from "./Product";
-import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const Products = ({cat,filters,sort}) => {
+const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -55,13 +55,13 @@ const Products = ({cat,filters,sort}) => {
     }
   }, [sort]);
 
-  console.log(cat,filters,sort)
   return (
     <Container>
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
-            .slice(0, 8).map((item) => <Product item={item} key={item.id} />)}
+            .slice(0, 8)
+            .map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );
 };

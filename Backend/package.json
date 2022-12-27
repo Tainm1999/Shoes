@@ -12,13 +12,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-load": "^1.1.16",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.7.3",
-    "mongose": "^0.0.2-security",
-    "nodemon": "^2.0.20",
-    "stripe": "^11.1.0"
+    "mongoose": "^6.0.5",
+    "nodemon": "^2.0.12",
+    "stripe": "^8.174.0"
   }
 }
