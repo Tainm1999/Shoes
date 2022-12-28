@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -35,6 +36,10 @@ min-width: 40%;
 margin: 20px 10px 0px 0px;
 padding: 10px;
 `;
+const MenuItem = styled.div`
+  font-size: 13px;
+  cursor: pointer;
+`;
 const Button = styled.button`
 width: 40%;
 border: none;
@@ -43,6 +48,7 @@ background-color: teal;
 margin-top:20px;
 color: white;
 cursor: pointer;
+margin-bottom: 10px;
 `;
 
 const Register = () => {
@@ -59,6 +65,7 @@ const Register = () => {
           <Input placeholder="confirm password" />
           <Button>CREATE</Button>
         </Form>
+        <Link to="/login"><MenuItem>HAVE AN ACCOUNT!</MenuItem></Link>
       </Wrapper>
     </Container>
   );

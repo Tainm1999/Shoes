@@ -21,7 +21,7 @@ export const sliderItems = [
     {
       id: 3,
       img: "https://res.cloudinary.com/dwpvpeh7c/image/upload/v1669314464/shoe/1c880e15fb0bcf41078c34253171ab69-removebg-preview_zeidyd.png",
-      title: "LOUNGEWEAR LOVE",
+      title: "WINTER LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 50% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
     },

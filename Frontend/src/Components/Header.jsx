@@ -35,7 +35,7 @@ const Right = styled.div`
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
-const Navbar = () => {
+const Header = () => {
   return (
     <Container>
       <Wrapper>
@@ -51,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

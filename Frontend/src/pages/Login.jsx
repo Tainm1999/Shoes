@@ -51,7 +51,6 @@ margin-bottom: 10px;
 const MenuItem = styled.div`
   font-size: 13px;
   cursor: pointer;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 const Login = () => {
   const [username, setUsername] = useState("");
