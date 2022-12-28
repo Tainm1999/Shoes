@@ -17,7 +17,6 @@ const Info = styled.div`
   transition: all 0.5s ease;
   cursor: pointer;
 `;
-
 const Container = styled.div`
   flex: 1;
   margin: 5px;
@@ -33,7 +32,6 @@ const Container = styled.div`
     opacity: 1;
   }
 `;
-
 const Circle = styled.div`
   width: 200px;
   height: 200px;
@@ -41,12 +39,10 @@ const Circle = styled.div`
   background-color: white;
   position: absolute;
 `;
-
 const Image = styled.img`
   height: 75%;
   z-index: 2;
 `;
-
 const Icon = styled.div`
   width: 40px;
   height: 40px;

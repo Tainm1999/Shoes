@@ -3,6 +3,7 @@ import {mobile} from "../responsive";
 import { login } from "../redux/apiCalls";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
 width: 100vw;
@@ -18,35 +19,26 @@ display: flex;
 align-items: center;
 justify-content: center;
 `;
-
 const Wrapper = styled.div`
 width: 25%;
 padding: 20px;
 background-color: white;
 ${mobile({ width: "75%" })}
 `;
-
 const Title = styled.h1`
 font-size: 24px;
 font-weight: 300;
 `;
-
 const Form = styled.form`
 display: flex;
 flex-direction: column;
 `;
-
-const Error = styled.span`
-  color: red;
-`;
-
 const Input = styled.input`
 flex: 1;
 min-width: 40%;
 margin: 10px 0;
 padding: 10px;
 `;
-
 const Button = styled.button`
 width: 40%;
 border: none;
@@ -56,19 +48,16 @@ color: white;
 cursor: pointer;
 margin-bottom: 10px;
 `;
-
-const Link = styled.a`
-margin: 5px 0px;
-font-size: 12px;
-text-decoration: underline;
-cursor: pointer;
+const MenuItem = styled.div`
+  font-size: 13px;
+  cursor: pointer;
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
-
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -91,9 +80,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             LOGIN
           </Button>
-          {error && <Error>Something  wrong...</Error>}
-          <Link>FORGOT THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link to="/register"><MenuItem>CREATE A NEW ACCOUNT</MenuItem></Link>
         </Form>
       </Wrapper>
     </Container>

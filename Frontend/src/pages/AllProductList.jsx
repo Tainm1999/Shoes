@@ -1,17 +1,12 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
-import Products from "../components/Products";
+import AllProducts from "../components/AllProducts";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
-import { useLocation } from "react-router";
 import { useState } from "react";
 
 const Container = styled.div``;
-
-const Title = styled.h1`
-  margin: 20px;
-`;
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,9 +27,7 @@ const Select = styled.select`
   ${mobile({ margin: "10px 0px" })}
 `;
 const Option = styled.option``;
-const ProductList = () => {
-  const location = useLocation();
-  const cat = location.pathname.split("/")[2];
+const AllProductList = () => {
   const [filters, setFilters] = useState({});
   const handleFilters = (e) => {
     const value = e.target.value;
@@ -43,11 +36,11 @@ const ProductList = () => {
       [e.target.name]: value,
     });
   };
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>{cat}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -74,10 +67,10 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products cat={cat} filters={filters} />
+      <AllProducts filters={filters}/>
       <Footer />
     </Container>
   );
 };
 
-export default ProductList;
+export default AllProductList;

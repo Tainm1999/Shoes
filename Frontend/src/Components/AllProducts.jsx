@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const Products = ({ cat, filters, sort }) => {
+const AllProducts = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -44,10 +44,9 @@ const Products = ({ cat, filters, sort }) => {
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
-            .slice(0, 4)
             .map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );
 };
 
-export default Products;
+export default AllProducts;
